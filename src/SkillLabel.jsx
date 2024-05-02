@@ -1,4 +1,4 @@
-function SkillLabel({name,emoji,color}){
+function SkillLabel({name,emoji,color,level}){
     const labelStyle = {
         backgroundColor: color,
     };
@@ -6,6 +6,11 @@ function SkillLabel({name,emoji,color}){
         <div className="skillLabel" style={labelStyle}>
             <span>{name}</span>
             <span>{emoji}</span>
+            <span>
+            {level==='beginner' && '👶'}
+            {level==='intermediate' && '👍'}
+            {level==='expert' && '💪'}
+            </span>
         </div>
     )
 }
